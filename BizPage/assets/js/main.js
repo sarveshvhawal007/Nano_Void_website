@@ -26,6 +26,20 @@
     return false;
   });
 
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 100) {
+      $('.message').fadeIn('slow');
+    } else {
+      $('.message').fadeOut('slow');
+    }
+  });
+  $('.message').click(function() {
+    $('html, body').animate({
+      scrollTop: 5350
+    }, 1500, 'easeInOutExpo');
+    return false;
+  });
+
   // Smooth scroll for the navigation menu and links with .scrollto classes
   var scrolltoOffset = $('#header').outerHeight() - 17;
   $(document).on('click', '.nav-menu a, .mobile-nav a, .scrollto', function(e) {

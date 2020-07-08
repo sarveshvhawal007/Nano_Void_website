@@ -30,6 +30,23 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 20px 0;
   padding: 0;
 }
+/*message*/
+ .message {
+  position:  fixed;
+  display: block;
+  background: #18d26e;
+  color: #fff;
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  line-height: 2;
+  font-size: 16px;
+  border-radius: 50%;
+  right: 15px;
+  bottom: 80px;
+  transition: background 0.5s;
+  z-index: 11;
+}
 
 /* Back to top button */
 .back-to-top {
@@ -43,7 +60,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1;
   font-size: 16px;
   border-radius: 50%;
-  right: 15px;
+   right: 15px;
   bottom: 15px;
   transition: background 0.5s;
   z-index: 11;
@@ -53,10 +70,17 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 12px;
   color: #fff;
 }
+.message i {
+  padding-top: 12px;
+  color: #fff;
+}
 
 @media (max-width: 768px) {
   .back-to-top {
     bottom: 15px;
+  }
+  .message{
+    bottom: 80px;
   }
 }
 
@@ -554,7 +578,7 @@ section {
 
 .section-header p {
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
   color: #333;
 }
 

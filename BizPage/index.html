@@ -35,30 +35,35 @@
 <body>
 
   <!-- ======= Header ======= -->
+
   <header id="header" class="fixed-top header-transparent">
     <div class="container-fluid">
-
+      <!-- <div class="mini-nav">
+        <p>hi</p>
+      </div> -->
       <div class="row justify-content-center">
+
         <div class="col-xl-11 d-flex align-items-center">
           <!-- Uncomment below if you prefer to use an image logo -->
           <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid">Nanovoid</a>
 
           <nav class="nav-menu d-none d-lg-block">
             <ul>
-              <li class="active"><a href="index.html">Home</a></li>
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#services">Nanobubbles</a></li>
-              <li><a href="#portfolio">Applications</a></li>
-              <li><a href="#team">Team</a></li>
-              <li class="drop-down"><a href="">Drop Down</a>
+              <li class="active"><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+              <li><a href="#about"><i class="fa fa-align-center"></i> About Us</a></li>
+              <li><a href="#call-to-action"><i class="fa fa-opera"></i> Nanobubbles</a></li>
+              <li><a href="#portfolio"><i class="fa fa-stack-exchange"></i> Applications</a></li>
+              <li><a href="#team"><i class="fa fa-users"></i> Team</a></li>
+              <!-- <li class="drop-down"><a href="">Drop Down</a>
                 <ul>
                   <li><a href="#">Drop Down 1</a></li>
                   <li><a href="#">Drop Down 3</a></li>
                   <li><a href="#">Drop Down 4</a></li>
                   <li><a href="#">Drop Down 5</a></li>
                 </ul>
-              </li>
-              <li><a href="#contact">Contact Us</a></li>
+              </li> -->
+              <li><a href="#facts"><i class="fa fa-plus-circle"></i> Join Us</a></li>
+              <li><a href="#contact"><i class="fa fa-phone"></i> Contact Us</a></li>
 
             </ul>
           </nav><!-- .nav-menu -->
@@ -306,7 +311,7 @@
         <p>Nanobubbles are a novel type of nanoscale bubble system. They have a typical mean spherical diameter of
           100-200 nanometers and they exist in bulk liquid. The most peculiar characteristic of these bulk nanobubbles
           is their extraordinary longevity. </p>
-        <a class="cta-btn" href="#">Know More about Nanobubbles</a>
+        <a class="cta-btn" href="nanobubbles.html" target="_blank">Know More about Nanobubbles</a>
       </div>
     </section><!-- End Call To Action Section -->
 
@@ -1031,60 +1036,68 @@ physically disabled, religion etc.</p>
 
         <div class="section-header">
           <h3>Contact Us</h3>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+          <!-- <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p> -->
         </div>
 
-        <div class="form">
-          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+        <div id="query" class="form">
+          <form action="forms/contact.php" method="post" role="form" class="php-form" >
             <div class="form-row">
               <div class="form-group col-md-6">
                 <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
-                  data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                <div class="validate"></div>
+                  data-rule="minlen:4" data-msg="Please enter at least 4 chars" required/>
+                <!-- <div class="validate"></div> -->
               </div>
               <div class="form-group col-md-6">
                 <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
-                  data-rule="email" data-msg="Please enter a valid email" />
-                <div class="validate"></div>
+                  data-rule="email" data-msg="Please enter a valid email" required/>
+                <!-- <div class="validate"></div> -->
               </div>
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
-                <input type="phone" class="form-control" name="phone" id="phone" placeholder="Category"
-                  data-rule="phone" data-msg="Please enter a valid phone number" />
-                <div class="validate"></div>
+                <select class="form-control" name="category" id="category" placeholder="Category"
+                 data-rule="required" data-msg="This field is requried" required/>
+                 <option value="1">1</option>
+                 <option value="2">2</option>
+                 <option value="3">3</option>
+                 <option value="4">4</option>
+               </select>
+                <!-- <div class="validate"></div> -->
               </div>
               <div class="form-group col-md-6">
                 <input type="phone" class="form-control" name="phone" id="phone" placeholder="Your Phone Number  (Optional)"
                   data-rule="phone" data-msg="Please enter a valid phone number" />
-                <div class="validate"></div>
+                <!-- <div class="validate"></div> -->
               </div>
             </div>
             <div class="form-group">
               <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
-                data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-              <div class="validate"></div>
+                data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" required />
+              <!-- <div class="validate"></div> -->
             </div>
 
             <div class="form-group">
               <textarea class="form-control" name="message" rows="5" data-rule="required"
-                data-msg="Please write something for us" placeholder="Message"></textarea>
-              <div class="validate"></div>
+                data-msg="Please write something for us" placeholder="Message" required></textarea>
+              <!-- <div class="validate"></div> -->
             </div>
-            <div class="mb-3">
+            <!-- <div class="mb-3">
               <div class="loading">Loading</div>
               <div class="error-message"></div>
               <div class="sent-message">Your message has been sent. Thank you!</div>
-            </div>
-            <div class="text-center"><button type="submit">Send Message</button></div>
+            </div> -->
+            <div class="text-center"><button name="submit_message" type="submit">Send Message</button></div>
           </form>
         </div>
         <div class="row contact-info">
           <div class="col-md-4">
             <div class="contact-address">
               <i class="ion-ios-location-outline"></i>
+              <!-- <i class="fa fa-envelope"></i> -->
               <h3>Address</h3>
-              <address>A108 Adam Street, NY 535022, USA</address>
+              <address>Dr Neelkanth Nirmalkar<br>
+Room No # 348<br>
+Indian Institute of Technology, Ropar</address>
             </div>
           </div>
 
@@ -1092,7 +1105,7 @@ physically disabled, religion etc.</p>
             <div class="contact-phone">
               <i class="ion-ios-telephone-outline"></i>
               <h3>Phone Number</h3>
-              <p><a href="tel:+155895548855">+1 5589 55488 55</a></p>
+              <p><a href="tel:+155895548855">+91 1881 242308</a></p>
             </div>
           </div>
 
@@ -1100,7 +1113,7 @@ physically disabled, religion etc.</p>
             <div class="contact-email">
               <i class="ion-ios-email-outline"></i>
               <h3>Email</h3>
-              <p><a href="mailto:info@example.com">info@example.com</a></p>
+              <p><a href="mailto:info@nanovoid.co.in">info@nanovoid.co.in</a></p>
             </div>
           </div>
 
@@ -1130,7 +1143,7 @@ physically disabled, religion etc.</p>
             <h4>Useful Links</h4>
             <ul>
               <li><i class="ion-ios-arrow-right"></i> <a href="#">Home</a></li>
-              <li><i class="ion-ios-arrow-right"></i> <a href="#">About us</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#about">About us</a></li>
               <li><i class="ion-ios-arrow-right"></i> <a href="#">Services</a></li>
               <li><i class="ion-ios-arrow-right"></i> <a href="#">Terms of service</a></li>
               <li><i class="ion-ios-arrow-right"></i> <a href="#">Privacy policy</a></li>
@@ -1177,7 +1190,7 @@ physically disabled, religion etc.</p>
   <a href="#" class="message"><i class="fa fa-envelope"></i></a>
 
   <!-- Uncomment below i you want to use a preloader -->
-  <!-- <div id="preloader"></div> -->
+  <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>

@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
 /*message*/
  .message {
   position:  fixed;
-  display: block;
+  display: none;
   background: #18d26e;
   color: #fff;
   width: 44px;
@@ -131,10 +131,22 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+/* .mini-nav{
+  display: block;
+  position: relative;
+  color: #fff;
+  transition: 0.3s;
+  /* font-size: 12px;
+  font-size: 13px;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+} */
 #header {
   transition: all 0.5s;
   z-index: 997;
   padding: 26px 0;
+  /* background: #e41010; */
   background: rgba(0, 0, 0, 0.9);
 }
 
@@ -143,6 +155,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header.header-scrolled {
+  /* background: rgba(0, 0, 0, 0.9); */
   background: rgba(0, 0, 0, 0.9);
   padding: 18px 0;
 }
@@ -188,6 +201,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu > ul > li {
+  /* background: #fff; */
   position: relative;
   white-space: nowrap;
   padding: 10px 0 10px 28px;
@@ -198,14 +212,17 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   color: #fff;
   transition: 0.3s;
-  font-size: 12px;
+  /* font-size: 12px; */
+  font-size: 13px;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   font-weight: 600;
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
+  /* background: #b5b5b5; */
   color: #18d26e;
+  font-size: 16px;
 }
 
 .nav-menu .drop-down ul {
@@ -217,7 +234,8 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0;
   visibility: hidden;
   padding: 10px 0;
-  background: #fff;
+  /* background-color: #fff; */
+  background-color: #fff;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
   transition: 0.3s;
 }
@@ -241,10 +259,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu .drop-down ul a:hover, .nav-menu .drop-down ul .active > a, .nav-menu .drop-down ul li:hover > a {
+  /* font-size: 16px; */
   color: #18d26e;
 }
 
 .nav-menu .drop-down > a:after {
+  /* font-size: 16px;  */
   content: "\ea99";
   font-family: IcoFont;
   padding-left: 5px;
@@ -396,7 +416,7 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 #intro {
   width: 100%;
-  height: 100vh;
+  height: 50vh;
   background: #000;
   overflow: hidden;
   position: relative;
@@ -424,7 +444,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #intro .carousel-item::before {
   content: '';
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(255, 255, 255,0);
 }
 
 #intro .carousel-container {
@@ -939,6 +959,17 @@ section {
   padding-top: 30px;
 }
 
+/*NanoBubbles section*/
+.nanobubbles img{
+  padding-bottom: 40px;
+  width: 60%;
+  border: 4px solid #fff;
+  margin: 0 auto;
+}
+.nanobubbles h3{
+  color: #18d26e;
+}
+
 /* Portfolio Section
 --------------------------------*/
 #portfolio {
@@ -1401,6 +1432,11 @@ section {
 #contact .contact-address, #contact .contact-phone, #contact .contact-email {
   margin-bottom: 20px;
 }
+#contact .contact-address:hover i, #contact .contact-phone:hover i, #contact .contact-email:hover i {
+  transform: scale(1.3);
+  color: #000000;
+  /* margin-bottom: 20px; */
+}
 
 @media (min-width: 768px) {
   #contact .contact-address, #contact .contact-phone, #contact .contact-email {
@@ -1415,12 +1451,12 @@ section {
   }
 }
 
-#contact .php-email-form {
+#contact .php_form {
   box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
   padding: 30px;
 }
 
-#contact .php-email-form .validate {
+#contact .php_form .validate {
   display: none;
   color: red;
   margin: 0 0 15px 0;
@@ -1428,7 +1464,7 @@ section {
   font-size: 13px;
 }
 
-#contact .php-email-form .error-message {
+#contact .php_form .error-message {
   display: none;
   color: #fff;
   background: #ed3c0d;
@@ -1437,11 +1473,11 @@ section {
   font-weight: 600;
 }
 
-#contact .php-email-form .error-message br + br {
+#contact .php_form .error-message br + br {
   margin-top: 25px;
 }
 
-#contact .php-email-form .sent-message {
+#contact .php_form .sent-message {
   display: none;
   color: #fff;
   background: #18d26e;
@@ -1450,14 +1486,14 @@ section {
   font-weight: 600;
 }
 
-#contact .php-email-form .loading {
+#contact .php_form .loading {
   display: none;
   background: #fff;
   text-align: center;
   padding: 15px;
 }
 
-#contact .php-email-form .loading:before {
+#contact .php_form .loading:before {
   content: "";
   display: inline-block;
   border-radius: 50%;
@@ -1470,18 +1506,18 @@ section {
   animation: animate-loading 1s linear infinite;
 }
 
-#contact .php-email-form input, #contact .php-email-form textarea {
+#contact .php_form input, #contact .php_form textarea {
   padding: 10px 14px;
   border-radius: 0;
   box-shadow: none;
   font-size: 15px;
 }
 
-#contact .php-email-form input::focus, #contact .php-email-form textarea::focus {
+#contact .php_form input::focus, #contact .php_form textarea::focus {
   background-color: #18d26e;
 }
 
-#contact .php-email-form button[type="submit"] {
+#contact .php_form button[type="submit"] {
   background: #18d26e;
   border: 0;
   padding: 10px 30px;
@@ -1490,7 +1526,7 @@ section {
   cursor: pointer;
 }
 
-#contact .php-email-form button[type="submit"]:hover {
+#contact .php_form button[type="submit"]:hover {
   background: #13a456;
 }
 
@@ -1516,13 +1552,15 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #000;
+  background: #18d26e;
+  /* background: #000; */
   padding: 0 0 30px 0;
   color: #eee;
   font-size: 14px;
 }
 
 #footer .footer-top {
+  /* background: #d4d4d4; */
   background: #111;
   padding: 60px 0 30px 0;
 }
